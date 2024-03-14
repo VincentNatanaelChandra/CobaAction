@@ -1,11 +1,15 @@
 name: golang-govulncheck-action
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
 
-on:  # yamllint disable-line rule:truthy
-  push: null
-  pull_request: null
-
-jobs:
-  on: [push]
+permissions:
+  contents: read
+  # Optional: allow read access to pull request. Use with only-new-issues option.
+  # pull-requests: read
 
 jobs:
   govulncheck_job:
@@ -15,5 +19,5 @@ jobs:
       - id: govulncheck
         uses: golang/govulncheck-action@v1
         with:
-           go-version-input: 1.21.6
-           go-package: ./CobaAction
+          go-version-input: 1.21.6
+          go-package: ./CobaAction
