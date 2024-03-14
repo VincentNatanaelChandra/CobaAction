@@ -15,7 +15,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
 
-    permissions:
+    permissions: read-all
       contents: read
       packages: read
       statuses: write
