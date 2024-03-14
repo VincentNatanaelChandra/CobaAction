@@ -1,9 +1,11 @@
+
 name: golang-govulncheck-action
 on:
   push:
     branches:
       - master
       - main
+      - Edit
   pull_request:
 
 permissions:
