@@ -9,13 +9,14 @@ on:
     branches:
       - main  # Adjust the branch name if necessary
       - Edit
+  permissions: read-all
 
 jobs:
   build:
     name: Lint
     runs-on: ubuntu-latest
 
-    permissions: read-all
+    permissions:
       contents: read
       packages: read
       statuses: write
