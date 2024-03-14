@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main  # Adjust the branch name if necessary
+      - Edit
   pull_request:
     branches:
       - main  # Adjust the branch name if necessary
+      - Edit
 
 jobs:
   build:
